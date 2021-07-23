@@ -23,7 +23,7 @@ function simulateMultple(puzzle: IPuzzle) {
     console.log('steps:' + steps);
     console.log('status:' + status);
     console.log('beststeps:' + beststeps);
-    console.log('beststate:' + bestcubes);
+    console.log('beststatus:' + bestcubes);
     console.log('count:' + count);
     //exit
 }
