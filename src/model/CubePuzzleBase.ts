@@ -36,4 +36,8 @@ export class CubePuzzleBase implements IPuzzle,ICubePuzzle {
         }
         return { isFinished, steps, status: this.cubes.toString() };
     }
+    copy() {
+        throw new Error("Method not implemented.");
+        return new CubePuzzleBase(this.cubes.map(cube => cube.side));
+    }
 }

@@ -6,7 +6,7 @@ function simulateMultple(puzzle: IPuzzle) {
     var beststeps: number[] = [];
     var bestcubes = "";
     do {
-        var { isFinished, steps, status } = puzzle.simulateOnce();
+        var { isFinished, steps, status } = puzzle.copy().simulateOnce();
         count++;
         if (isFinished && ((steps.length < beststeps.length && beststeps.length != 0) || (beststeps.length == 0))) {
             beststeps = steps;
@@ -29,7 +29,7 @@ function simulateMultple(puzzle: IPuzzle) {
 }
 
 function main() {
-    simulateMultple(new CubePuzzle1([2, 0, 2, 0]))
+    simulateMultple(new CubePuzzle1([2,2,2,0]))
 }
 
 main();

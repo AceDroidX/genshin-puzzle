@@ -15,4 +15,7 @@ export class CubePuzzle1 extends CubePuzzleBase {
             this.cubes[i + 1].trigger();
         }
     }
+    copy(){
+        return new CubePuzzle1(this.cubes.map(cube => cube.side));
+    }
 }
