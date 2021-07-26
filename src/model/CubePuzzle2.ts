@@ -1,20 +1,45 @@
+import { Cube4 } from "./Cube";
 import { CubePuzzleBase } from "./CubePuzzleBase";
+import { ICubePuzzle, IPuzzle } from "./Interface";
 
 //荒海地底的方块解谜(条形)
-export class CubePuzzle1 extends CubePuzzleBase {
-    trigger(i:number) {
-        //TODO: 实现解谜
-        
-        // this.cubes[i].trigger();
-        // if(i==0) {
-        //     this.cubes[3].trigger();//i-1
-        //     this.cubes[1].trigger();//i+1
-        // }else if(i==3) {
-        //     this.cubes[2].trigger();
-        //     this.cubes[0].trigger();
-        // }else{
-        //     this.cubes[i-1].trigger();
-        //     this.cubes[i+1].trigger();
-        // }
+export class CubePuzzle2 extends CubePuzzleBase implements IPuzzle, ICubePuzzle {
+    cubes: Cube4[];
+    constructor(cubenumlist: number[]) {
+        super();
+        this.cubes = [];
+        for (var i = 0; i < cubenumlist.length; i++) {
+            this.cubes.push(new Cube4(cubenumlist[i]));
+        }
+    }
+    trigger(i: number) {
+        switch (i) {
+            case 0:
+                this.cubes[0].trigger();
+                this.cubes[2].trigger();
+                break;
+            case 1:
+                this.cubes[0].trigger();
+                this.cubes[1].trigger();
+                this.cubes[2].trigger();
+                break;
+            case 2:
+                this.cubes[0].trigger();
+                this.cubes[2].trigger();
+                this.cubes[4].trigger();
+                break;
+            case 3:
+                this.cubes[2].trigger();
+                this.cubes[3].trigger();
+                this.cubes[4].trigger();
+                break;
+            case 4:
+                this.cubes[2].trigger();
+                this.cubes[4].trigger();
+                break;
+        }
+    }
+    copy() {
+        return new CubePuzzle2(this.cubes.map(cube => cube.value));
     }
 }
