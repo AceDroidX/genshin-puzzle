@@ -1,7 +1,19 @@
+import { Cube4 } from "./Cube";
 import { CubePuzzleBase } from "./CubePuzzleBase";
+import { ICubePuzzle } from "./Interface";
+import { IPuzzle } from "./Interface";
 
 //荒海地底的方块解谜(正方形)
-export class CubePuzzle1 extends CubePuzzleBase {
+//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210723181620.png
+export class CubePuzzle1 extends CubePuzzleBase implements IPuzzle,ICubePuzzle {
+    cubes: Cube4[];
+    constructor(cubenumlist: number[]) {
+        super();
+        this.cubes = [];
+        for (var i = 0; i < cubenumlist.length; i++) {
+            this.cubes.push(new Cube4(cubenumlist[i]));
+        }
+    }
     trigger(i: number) {
         this.cubes[i].trigger();
         if (i == 0) {
@@ -16,6 +28,6 @@ export class CubePuzzle1 extends CubePuzzleBase {
         }
     }
     copy(){
-        return new CubePuzzle1(this.cubes.map(cube => cube.side));
+        return new CubePuzzle1(this.cubes.map(cube => cube.value));
     }
 }

@@ -1,14 +1,12 @@
-import { Cube } from "./Cube";
-import { ICubePuzzle } from "./ICubePuzzle";
-import { IPuzzle } from "./IPuzzle";
-export class CubePuzzleBase implements IPuzzle,ICubePuzzle {
-    cubes: Cube[];
-    constructor(cubes: number[]) {
-        this.cubes = [];
-        for (var i = 0; i < cubes.length; i++) {
-            this.cubes.push(new Cube(cubes[i]));
-        }
-    }
+import { CubeBase } from "./CubeBase";
+export class CubePuzzleBase {
+    cubes: CubeBase[] = [];
+    // constructor(cubenumlist: number[]) {
+    //     this.cubes = [];
+    //     for (var i = 0; i < cubenumlist.length; i++) {
+    //         this.cubes.push(new CubeBase(cubenumlist[i]));
+    //     }
+    // }
     trigger(i: number): void {
         throw new Error("Method not implemented.");
     }
@@ -17,7 +15,7 @@ export class CubePuzzleBase implements IPuzzle,ICubePuzzle {
     }
     checkIsFinished() {
         // if (cubes[0].side == cubes[1].side && cubes[1].side == cubes[2].side && cubes[2].side == cubes[3].side) {
-        if (this.cubes[0].side == 0 && this.cubes[1].side == 0 && this.cubes[2].side == 0 && this.cubes[3].side == 0) {
+        if (this.cubes[0].value == 0 && this.cubes[1].value == 0 && this.cubes[2].value == 0 && this.cubes[3].value == 0) {
             return true;
         }
         return false;
@@ -38,6 +36,6 @@ export class CubePuzzleBase implements IPuzzle,ICubePuzzle {
     }
     copy() {
         throw new Error("Method not implemented.");
-        return new CubePuzzleBase(this.cubes.map(cube => cube.side));
+        // return new CubePuzzleBase(this.cubes.map(cube => cube.value));
     }
 }
