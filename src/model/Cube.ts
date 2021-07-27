@@ -1,4 +1,6 @@
 import { CubeBase } from "./CubeBase";
+
+//旋转的方块，4个值(0-3)
 export class Cube4 extends CubeBase {
 
     //触发后顺时针旋转
@@ -15,6 +17,7 @@ export class Cube4 extends CubeBase {
     }
 }
 
+//亮灯的方块，3个值(0-2)
 export class Cube3 extends CubeBase {
 
     trigger() {

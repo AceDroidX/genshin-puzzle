@@ -15,7 +15,7 @@ export class CubePuzzleBase {
     }
     checkIsFinished() {
         // if (cubes[0].side == cubes[1].side && cubes[1].side == cubes[2].side && cubes[2].side == cubes[3].side) {
-        if (this.cubes[0].value == 0 && this.cubes[1].value == 0 && this.cubes[2].value == 0 && this.cubes[3].value == 0) {
+        if (this.cubes[0].value == this.cubes[1].value && this.cubes[1].value == this.cubes[2].value && this.cubes[2].value == this.cubes[3].value) {
             return true;
         }
         return false;

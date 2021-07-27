@@ -19,6 +19,7 @@
   "author": "AceDroidX",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^16.4.3",
     "typescript": "latest"
   }
 }

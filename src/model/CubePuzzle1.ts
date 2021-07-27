@@ -3,6 +3,7 @@ import { CubePuzzleBase } from "./CubePuzzleBase";
 import { ICubePuzzle } from "./Interface";
 import { IPuzzle } from "./Interface";
 
+//适用的谜题类型:
 //荒海地底的方块解谜(正方形)
 //https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210723181620.png
 export class CubePuzzle1 extends CubePuzzleBase implements IPuzzle,ICubePuzzle {

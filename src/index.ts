@@ -1,5 +1,6 @@
 import { CubePuzzle1 } from "./model/CubePuzzle1";
 import { CubePuzzle3 } from "./model/CubePuzzle3";
+import { CubePuzzle4 } from "./model/CubePuzzle4";
 import { IPuzzle } from "./model/Interface";
 
 function simulateMultple(puzzle: IPuzzle) {
@@ -31,7 +32,8 @@ function simulateMultple(puzzle: IPuzzle) {
 
 function main() {
     //输入你想要模拟的谜题
-    simulateMultple(new CubePuzzle3([0,2,0,1]))
+    simulateMultple(new CubePuzzle4([2,1,2,0]))
+    process.exit(0);
 }
 
 main();
