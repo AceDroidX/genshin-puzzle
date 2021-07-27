@@ -1,18 +1,18 @@
-import { Cube3, Cube4 } from "./Cube";
-import { CubePuzzleBase } from "./CubePuzzleBase";
-import { ICubePuzzle } from "./Interface";
-import { IPuzzle } from "./Interface";
+import { Cube3, Cube4 } from "./base/Cube";
+import { CubePuzzleBase } from "./base/CubePuzzleBase";
+import { ICubePuzzle } from "./base/Interface";
+import { IPuzzle } from "./base/Interface";
 
 //鸣神大社东北侧的4方块解谜
 //https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727180204.png
-//图例为simulateMultple(new CubePuzzle4([2,1,2,0]))
+//图例为simulateMultiple(new CubePuzzle4([2,1,2,0]))
 export class CubePuzzle4 extends CubePuzzleBase implements IPuzzle, ICubePuzzle {
-    cubes: Cube4[];
+    cubes: Cube3[];
     constructor(cubenumlist: number[]) {
         super();
         this.cubes = [];
         for (var i = 0; i < cubenumlist.length; i++) {
-            this.cubes.push(new Cube4(cubenumlist[i]));
+            this.cubes.push(new Cube3(cubenumlist[i]));
         }
     }
     trigger(i: number) {

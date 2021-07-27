@@ -8,7 +8,7 @@ TypeScript的练手小作品
 
 Example:
 ```typescript
-simulateMultple(new CubePuzzle3([0,2,0,1]))
+simulateMultiple(new CubePuzzle3([0,2,0,1]))
 //output:
 
 // > genshin-puzzle@1.0.0 serve

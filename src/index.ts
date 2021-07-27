@@ -1,9 +1,10 @@
 import { CubePuzzle1 } from "./model/CubePuzzle1";
 import { CubePuzzle3 } from "./model/CubePuzzle3";
 import { CubePuzzle4 } from "./model/CubePuzzle4";
-import { IPuzzle } from "./model/Interface";
+import { IPuzzle } from "./model/base/Interface";
+import { CubePuzzle5 } from "./model/CubePuzzle5";
 
-function simulateMultple(puzzle: IPuzzle) {
+function simulateMultiple(puzzle: IPuzzle) {
     var count = 0;
     var beststeps: number[] = [];
     var bestcubes = "";
@@ -32,7 +33,7 @@ function simulateMultple(puzzle: IPuzzle) {
 
 function main() {
     //输入你想要模拟的谜题
-    simulateMultple(new CubePuzzle4([2,1,2,0]))
+    simulateMultiple(new CubePuzzle5([0,1,2]))
     process.exit(0);
 }
 

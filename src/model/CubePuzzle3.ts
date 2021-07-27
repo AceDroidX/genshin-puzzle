@@ -1,11 +1,14 @@
-import { Cube3 } from "./Cube";
-import { CubePuzzleBase } from "./CubePuzzleBase";
-import { ICubePuzzle } from "./Interface";
-import { IPuzzle } from "./Interface";
+import { Cube3 } from "./base/Cube";
+import { CubePuzzleBase } from "./base/CubePuzzleBase";
+import { ICubePuzzle } from "./base/Interface";
+import { IPuzzle } from "./base/Interface";
 
 //荒海西侧的方块解谜
 //https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210726151802.png
-//图例为simulateMultple(new CubePuzzle3([0,2,0,1]))
+//图例为simulateMultiple(new CubePuzzle3([0,2,0,1]))
+//稻妻城底的方块解谜
+//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727210637.png
+//图例为simulateMultiple(new CubePuzzle3([0,1,2,1]))
 export class CubePuzzle3 extends CubePuzzleBase implements IPuzzle,ICubePuzzle {
     cubes: Cube3[];
     constructor(cubenumlist: number[]) {

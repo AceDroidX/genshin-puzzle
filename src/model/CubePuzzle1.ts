@@ -1,7 +1,7 @@
-import { Cube4 } from "./Cube";
-import { CubePuzzleBase } from "./CubePuzzleBase";
-import { ICubePuzzle } from "./Interface";
-import { IPuzzle } from "./Interface";
+import { Cube4 } from "./base/Cube";
+import { CubePuzzleBase } from "./base/CubePuzzleBase";
+import { ICubePuzzle } from "./base/Interface";
+import { IPuzzle } from "./base/Interface";
 
 //适用的谜题类型:
 //荒海地底的方块解谜(正方形)

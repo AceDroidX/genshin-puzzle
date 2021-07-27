@@ -15,10 +15,12 @@ export class CubePuzzleBase {
     }
     checkIsFinished() {
         // if (cubes[0].side == cubes[1].side && cubes[1].side == cubes[2].side && cubes[2].side == cubes[3].side) {
-        if (this.cubes[0].value == this.cubes[1].value && this.cubes[1].value == this.cubes[2].value && this.cubes[2].value == this.cubes[3].value) {
-            return true;
+        for (var i = 0; i < this.cubes.length - 1; i++) {
+            if (this.cubes[i].value != this.cubes[i + 1].value) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
     simulateOnce() {
         var isFinished = false;
@@ -26,7 +28,7 @@ export class CubePuzzleBase {
         var steps = [];
         while (!isFinished && count < 20) {
             //ramdomly choose a cube
-            var index = Math.floor(Math.random() * 4);
+            var index = Math.floor(Math.random() * this.cubes.length);
             this.trigger(index);
             steps.push(index);
             count++;

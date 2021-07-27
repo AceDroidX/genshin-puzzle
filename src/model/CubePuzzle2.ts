@@ -1,6 +1,6 @@
-import { Cube4 } from "./Cube";
-import { CubePuzzleBase } from "./CubePuzzleBase";
-import { ICubePuzzle, IPuzzle } from "./Interface";
+import { Cube4 } from "./base/Cube";
+import { CubePuzzleBase } from "./base/CubePuzzleBase";
+import { ICubePuzzle, IPuzzle } from "./base/Interface";
 
 //荒海地底的方块解谜(条形)
 export class CubePuzzle2 extends CubePuzzleBase implements IPuzzle, ICubePuzzle {
