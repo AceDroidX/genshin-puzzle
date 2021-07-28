@@ -3,18 +3,7 @@ import { CubePuzzleBase } from "./base/CubePuzzleBase";
 import { ICubePuzzle } from "./base/Interface";
 import { IPuzzle } from "./base/Interface";
 
-//适用的谜题类型:
-//鸣神大社东北侧的3方块解谜
-//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727180204.png
-//图例为simulateMultiple(new CubePuzzle5([2,2,1]))
-//鸣神大社西南侧的3方块解谜
-//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727202552.png
-//图例为simulateMultiple(new CubePuzzle5([0,1,1]))
-//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727203059.png
-//图例为simulateMultiple(new CubePuzzle5([0,1,2]))
-//九条阵屋东侧的3方块解谜
-//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210727223130.png
-//图例为simulateMultiple(new CubePuzzle5([0,1,2]))
+//TODO:添加新类型
 export class CubePuzzle5 extends CubePuzzleBase implements IPuzzle, ICubePuzzle {
     cubes: Cube3[];
     constructor(cubenumlist: number[]) {

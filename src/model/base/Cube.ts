@@ -10,11 +10,6 @@ export class Cube4 extends CubeBase {
             this.value = 0;
         }
     }
-
-    //override stringify
-    toString() {
-        return `${this.value}`;
-    }
 }
 
 //亮灯的方块，3个值(0-2)
@@ -25,10 +20,5 @@ export class Cube3 extends CubeBase {
         if (this.value > 2) {
             this.value = 0;
         }
-    }
-
-    //override stringify
-    toString() {
-        return `${this.value}`;
     }
 }

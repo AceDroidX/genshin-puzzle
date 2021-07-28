@@ -3,6 +3,7 @@ import { CubePuzzle3 } from "./model/CubePuzzle3";
 import { CubePuzzle4 } from "./model/CubePuzzle4";
 import { IPuzzle } from "./model/base/Interface";
 import { CubePuzzle5 } from "./model/CubePuzzle5";
+import { CubePuzzle6 } from "./model/CubePuzzle6";
 
 function simulateMultiple(puzzle: IPuzzle) {
     var count = 0;
@@ -33,7 +34,7 @@ function simulateMultiple(puzzle: IPuzzle) {
 
 function main() {
     //输入你想要模拟的谜题
-    simulateMultiple(new CubePuzzle5([0,1,2]))
+    simulateMultiple(new CubePuzzle3([2, 1, 2, 0, 1]))
     process.exit(0);
 }
 
