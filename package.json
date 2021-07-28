@@ -1,25 +1,38 @@
 {
   "name": "genshin-puzzle",
   "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AceDroidX/genshin-puzzle.git"
-  },
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "tsc --build --clean",
-    "build": "tsc",
-    "dev": "tsc -w",
-    "prepare": "npm run build",
-    "serve": "tsc&&node dist/index.js"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
   },
-  "author": "AceDroidX",
-  "license": "ISC",
   "dependencies": {
-    "@types/node": "^16.4.3",
-    "typescript": "latest"
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "vuetify": "^2.5.5"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.29.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

@@ -3,10 +3,10 @@ import { CubePuzzleBase } from "./base/CubePuzzleBase";
 import { ICubePuzzle } from "./base/Interface";
 import { IPuzzle } from "./base/Interface";
 
+
 //适用的谜题类型:
-//荒海地底的方块解谜(正方形)
-//https://github.com/AceDroidX/genshin-puzzle/blob/main/doc/20210723181620.png
-export class CubePuzzle1 extends CubePuzzleBase implements IPuzzle,ICubePuzzle {
+//条形+旋转
+export class CubePuzzle2 extends CubePuzzleBase implements IPuzzle, ICubePuzzle {
     cubes: Cube4[];
     constructor(cubenumlist: number[]) {
         super();
@@ -18,17 +18,15 @@ export class CubePuzzle1 extends CubePuzzleBase implements IPuzzle,ICubePuzzle {
     trigger(i: number) {
         this.cubes[i].trigger();
         if (i == 0) {
-            this.cubes[3].trigger();//i-1
-            this.cubes[1].trigger();//i+1
-        } else if (i == 3) {
-            this.cubes[2].trigger();
-            this.cubes[0].trigger();
-        } else {
+            this.cubes[1].trigger();
+        } else if (i == this.cubes.length - 1) {
             this.cubes[i - 1].trigger();
-            this.cubes[i + 1].trigger();
+        } else {
+            this.cubes[i - 1].trigger();//i-1
+            this.cubes[i + 1].trigger();//i+1
         }
     }
-    copy(){
-        return new CubePuzzle1(this.cubes.map(cube => cube.value));
+    copy() {
+        return new CubePuzzle2(this.cubes.map(cube => cube.value));
     }
 }
