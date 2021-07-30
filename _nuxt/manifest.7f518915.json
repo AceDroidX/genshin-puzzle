@@ -1,6 +1,7 @@
 {
   "name": "genshin-puzzle",
   "short_name": "genshin-puzzle",
+  "description": "https://acedroidx.github.io/genshin-puzzle/",
   "icons": [
     {
       "src": "/genshin-puzzle/_nuxt/icons/icon_64x64.e3e9fb.png",
