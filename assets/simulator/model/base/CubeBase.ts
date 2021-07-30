@@ -1,19 +1,19 @@
 export class CubeBase {
     value: number;
-    constructor(value: number) {
-        this.value = value;
+    constructor (value: number) {
+      this.value = value
     }
 
-    //触发后事件
-    trigger() {
-        throw new Error("Method not implemented.");
+    // 触发后事件
+    trigger () {
+      throw new Error('Method not implemented.')
     }
 
-    //override stringify
-    toString() {
-        return `${this.value}`;
+    // override stringify
+    toString () {
+      return `${this.value}`
     }
-    //copy
+    // copy
     // copy() {
     //     throw new Error("Method not implemented.");
     //     return new CubeBase(this.value);
