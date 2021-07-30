@@ -35,9 +35,53 @@
             例1 条形+亮灯
           </v-card-title>
           <v-card-text>
-            <v-img src="/screenshot/20210726151802.png" />
+            <v-img src="screenshot/20210726151802.png" />
             <p>
               图为荒海西侧的方块解谜，该解谜为条形+亮灯类别，其描述为0,2,0,1
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="8" md="6">
+        <v-card>
+          <v-card-title class="headline">
+            例2 条形+旋转
+          </v-card-title>
+          <v-card-text>
+            <p>
+              暂无图例
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="8" md="6">
+        <v-card>
+          <v-card-title class="headline">
+            例3 环形+亮灯
+          </v-card-title>
+          <v-card-text>
+            <v-img src="screenshot/20210727180204.png" />
+            <p>
+              图为鸣神大社东北侧的4方块解谜，该解谜为环形+亮灯类别，其描述为2,1,2,0
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="8" md="6">
+        <v-card>
+          <v-card-title class="headline">
+            例4 环形+旋转
+          </v-card-title>
+          <v-card-text>
+            <v-img src="screenshot/20210728174646.png" />
+            <p>
+              图为九条阵屋东北侧的方块解谜，该解谜为环形+旋转类别，其描述为3,0,0
             </p>
           </v-card-text>
         </v-card>
