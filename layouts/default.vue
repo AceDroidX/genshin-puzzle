@@ -80,23 +80,18 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        },
-        {
-          icon: 'mdi-chart-bubble',
           title: 'Guide 使用说明',
           to: '/guide'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'About 关于',
-          to: '/about'
+          title: 'Puzzle 解谜',
+          to: '/puzzle'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Puzzle 解谜',
-          to: '/puzzle'
+          title: 'About 关于',
+          to: '/about'
         }
       ],
       miniVariant: false,

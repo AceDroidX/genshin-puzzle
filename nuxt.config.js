@@ -94,6 +94,13 @@ export default {
     host: '0.0.0.0' // default: localhost
   },
   router: {
-    base: '/genshin-puzzle/'
+    base: '/genshin-puzzle/',
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'index',
+        path: '/index',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
   }
 }
