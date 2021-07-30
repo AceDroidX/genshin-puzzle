@@ -88,7 +88,7 @@ export default {
   },
 
   generate: {
-    fallback: true, // if you want to use '404.html'
+    fallback: true // if you want to use '404.html'
   },
   server: {
     host: '0.0.0.0' // default: localhost

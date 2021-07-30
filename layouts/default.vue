@@ -35,14 +35,10 @@
       <v-btn icon @click.stop="fixed = !fixed">
         <v-icon>mdi-minus</v-icon>
       </v-btn> -->
-      <v-toolbar-title v-text="title" @click="$router.push('/')"></v-toolbar-title>
+      <v-toolbar-title @click="$router.push('/')" v-text="title" />
       <v-spacer />
       <v-btn icon @click.stop="$vuetify.theme.dark = !$vuetify.theme.dark">
-        <v-icon
-          >mdi-brightness-{{
-            `${$vuetify.theme.dark ? "4" : "6"}`
-          }}</v-icon
-        >
+        <v-icon v-text="mdi - brightness - `${$vuetify.theme.dark ? '4' : '6'}`" />
       </v-btn>
       <!-- <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-menu</v-icon>
@@ -71,43 +67,43 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       clipped: true,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: "mdi-apps",
-          title: "Welcome",
-          to: "/",
+          icon: 'mdi-apps',
+          title: 'Welcome',
+          to: '/'
         },
         {
-          icon: "mdi-chart-bubble",
-          title: "Inspire",
-          to: "/inspire",
+          icon: 'mdi-chart-bubble',
+          title: 'Inspire',
+          to: '/inspire'
         },
         {
-          icon: "mdi-chart-bubble",
-          title: "Guide 使用说明",
-          to: "/guide",
+          icon: 'mdi-chart-bubble',
+          title: 'Guide 使用说明',
+          to: '/guide'
         },
         {
-          icon: "mdi-chart-bubble",
-          title: "About 关于",
-          to: "/about",
+          icon: 'mdi-chart-bubble',
+          title: 'About 关于',
+          to: '/about'
         },
         {
-          icon: "mdi-chart-bubble",
-          title: "Puzzle 解谜",
-          to: "/puzzle",
-        },
+          icon: 'mdi-chart-bubble',
+          title: 'Puzzle 解谜',
+          to: '/puzzle'
+        }
       ],
       miniVariant: false,
       // right: true,
       // rightDrawer: false,
-      title: "genshin-puzzle",
-    };
-  },
-};
+      title: 'genshin-puzzle'
+    }
+  }
+}
 </script>
